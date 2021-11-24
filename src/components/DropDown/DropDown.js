@@ -1,16 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DropDown.css';
 
-const DropDown = ({ title, header, item }) => {
+const DropDown = ({ title, header, items }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggling = () => setIsOpen(!isOpen);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const onOptionClick = value => () => {
+    setSelectedOption(value);
+    setIsOpen(false);
+  }
 
   return (
     <div className="DropDownContainer">
-      <div className="DropDownHeader">{header}</div>
-      <div className="DropDownListContainer">
-        <ul className="DropDownList">
-          <li className="DropDownListItem">{item}</li>
-        </ul>
+      <div className="DropDownHeader" onClick={toggling}>
+      {selectedOption || `${header}`}
       </div>
+      {isOpen && (
+        <div className="DropDownListContainer">
+          <ul className="DropDownList">
+          {items.map(item => (
+            <li className="DropDownListItem" onClick={onOptionClick(item)} key={Math.random()}>
+              {item}
+            </li>
+          ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

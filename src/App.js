@@ -5,7 +5,7 @@ function App() {
   const data = {
     title: 'Country',
     header: 'Select a country',
-    item: ['Malmö', 'Stockholm', 'Köpenhamn']
+    items: ['Malmö', 'Stockholm', 'Köpenhamn']
   }
 
   return (
