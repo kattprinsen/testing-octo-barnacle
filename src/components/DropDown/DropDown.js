@@ -14,8 +14,8 @@ const DropDown = ({ title, header, items }) => {
 
   return (
     <div className="dropdown-container">
-      <span className="dropdown-title"> {title} </span>
-      <div className="dropdown-header" onClick={toggling}>
+      <span className="dropdown-title" data-testid="title-id"> {title} </span>
+      <div className="dropdown-header" onClick={toggling} data-testid="header-id">
       {selectedOption || `${header}`}
       </div>
       {isOpen && (
