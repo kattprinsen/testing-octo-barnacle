@@ -13,15 +13,15 @@ const DropDown = ({ title, header, items }) => {
   }
 
   return (
-    <div className="DropDownContainer">
-      <div className="DropDownHeader" onClick={toggling}>
+    <div className="dropdown-container">
+      <div className="dropdown-header" onClick={toggling}>
       {selectedOption || `${header}`}
       </div>
       {isOpen && (
-        <div className="DropDownListContainer">
-          <ul className="DropDownList">
+        <div className="dropdown-list-container">
+          <ul className="dropdown-list">
           {items.map(item => (
-            <li className="DropDownListItem" onClick={onOptionClick(item)} key={Math.random()}>
+            <li className="dropdown-list-item" onClick={onOptionClick(item)} key={Math.random()}>
               {item}
             </li>
           ))}
