@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import DropDown from '../DropDown';
 
 test('renders the component', () => {
@@ -26,4 +27,10 @@ test('renders header and title', () => {
 
   expect(screen.getByTestId('title-id')).toHaveTextContent('Title');
   expect(screen.getByTestId('header-id')).toHaveTextContent('Header');
-})
+});
+
+test('click the dropdown', () => {
+  render(<DropDown header={'Select a country'} />);
+  userEvent.click(screen.getByTestId('header-id'));
+  //Assert
+});
