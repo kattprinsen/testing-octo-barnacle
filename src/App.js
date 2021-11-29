@@ -2,15 +2,23 @@ import DropDown from './components/DropDown/DropDown';
 
 function App() {
 
-  const data = {
+  const countryData = {
     title: 'Country',
     header: 'Select a country',
+    items: ['Sweden', 'Norge', 'Danmark']
+  }
+
+  const nodeData = {
+    title: 'Node',
+    header: 'Select a node',
     items: ['Malmö', 'Stockholm', 'Köpenhamn']
   }
 
   return (
     <>
-    <DropDown {...data} />
+    <DropDown {...countryData} />
+    <DropDown {...nodeData} />
+
     </>
   );
 }
