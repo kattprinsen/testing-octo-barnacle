@@ -14,11 +14,17 @@ function App() {
     items: ['Malmö', 'Stockholm', 'Köpenhamn']
   }
 
+  const flowData = {
+    title: 'Flow',
+    header: 'Select a flow',
+    items: ['Order pickup', 'Delivery', 'In-store']
+  }
+
   return (
     <>
     <DropDown {...countryData} />
     <DropDown {...nodeData} />
-
+    <DropDown {...flowData} />
     </>
   );
 }
