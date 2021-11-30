@@ -1,4 +1,6 @@
 import DropDown from './components/DropDown/DropDown';
+import Button from './components/Button/Button';
+
 
 function App() {
 
@@ -20,11 +22,14 @@ function App() {
     items: ['Order pickup', 'Delivery', 'In-store']
   }
 
+  console.log(nodeData);
+
   return (
     <>
     <DropDown {...countryData} />
     <DropDown {...nodeData} />
     <DropDown {...flowData} />
+    <Button />
     </>
   );
 }

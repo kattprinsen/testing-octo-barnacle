@@ -1,0 +1,8 @@
+.btn-container {
+  width: 100px;
+  margin: 0 auto;
+  border: 2px solid black;
+  text-align: center;
+  padding: 1em;
+  cursor: pointer;
+}
