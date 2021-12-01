@@ -5,4 +5,9 @@
   text-align: center;
   padding: 1em;
   cursor: pointer;
+  background: white;
+}
+
+.btn-container:hover {
+  background: blue;
 }
