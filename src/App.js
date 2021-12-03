@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import DropDown from './components/DropDown/DropDown';
 import Button from './components/Button/Button';
 
@@ -22,7 +23,13 @@ const flowData = {
 
 function App() {
 
-  console.log(nodeData);
+  const [country, setCountry] = useState(null);
+  const [node, setNode] = useState(null);
+  const [flow, setFlow] = useState(null);
+
+  useEffect(() => {
+    console.log('country was changed');
+  }, [country]);
 
   return (
     <>
