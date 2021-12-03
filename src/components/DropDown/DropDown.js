@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './DropDown.css';
 
-const DropDown = ({ title, header, items }) => {
+const DropDown = ({ title, header, items, setClicked }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggling = () => setIsOpen(!isOpen);
@@ -10,6 +10,7 @@ const DropDown = ({ title, header, items }) => {
   const onOptionClick = value => () => {
     setSelectedOption(value);
     setIsOpen(false);
+    setClicked(value);
   }
 
   return (
