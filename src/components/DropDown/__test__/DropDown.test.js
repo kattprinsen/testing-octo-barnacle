@@ -1,11 +1,18 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import renderer from 'react-test-renderer';
 import DropDown from '../DropDown';
 
 test('renders the component', () => {
   render(<DropDown />);
 });
+
+it('renders correctly', () => {
+  const tree = renderer.create(<DropDown title='DropDown'>DropDown</DropDown>).toJSON();
+  expect(tree).toMatchSnapshot();
+})
+
 
 test('renders title of the dropdown', () => {
   render(<DropDown title={'Country'} />);
