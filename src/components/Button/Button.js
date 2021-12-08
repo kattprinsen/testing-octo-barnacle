@@ -1,11 +1,11 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({ country, node, flow }) => {
+const Button = ({ country }) => {
 
   return (
     <div className="btn-container">
-    Click me
+    {country || 'Spara'}
     </div>
   );
 }
