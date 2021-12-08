@@ -1,11 +1,15 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({ country }) => {
+const Button = ({ countries, flows, nodes }) => {
+
+  const handleClick = () => {
+    console.log('countries', countries);
+  }
 
   return (
-    <div className="btn-container">
-    {country || 'Spara'}
+    <div className="btn-container" onClick={handleClick}>
+    {countries}
     </div>
   );
 }

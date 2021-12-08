@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DropDown from './components/DropDown/DropDown';
 import Button from './components/Button/Button';
 
@@ -23,15 +23,19 @@ const flowData = {
 
 function App() {
 
-  const [clicked, setClicked] = useState(null);
+  const [country, setCountry] = useState(null);
+  const [node, setNode] = useState(null);
+  const [flow, setFlow] = useState(null);
 
   return (
     <>
-    <DropDown {...countryData} setClicked={setClicked} />
-    <DropDown {...nodeData} />
-    <DropDown {...flowData} />
-    <Button />
-    <p>lol {clicked}</p>
+    <DropDown {...countryData} setClicked={setCountry} />
+    <DropDown {...flowData} setClicked={setFlow} />
+    <DropDown {...nodeData} setClicked={setNode} />
+    <Button countries={country} flows={flow} nodes={node} />
+    <p>Country: {country}</p>
+    <p>Flow: {flow}</p>
+    <p>Node: {node}</p>
     </>
   );
 }
