@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="dropdown-container"
+>
+  <span
+    className="dropdown-title"
+    data-testid="title-id"
+  >
+     
+    DropDown
+     
+  </span>
+  <div
+    className="dropdown-header"
+    data-testid="header-id"
+    onClick={[Function]}
+  >
+    undefined
+  </div>
+</div>
+`;
