@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import DropDown from './components/DropDown/DropDown';
 import Button from './components/Button/Button';
 
